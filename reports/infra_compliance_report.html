@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Infrastructure Validation Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    h1 { color: #2c3e50; }
+    table { border-collapse: collapse; width: 80%; }
+    th, td { border: 1px solid #ccc; padding: 8px; }
+    .pass { color: green; }
+    .fail { color: red; }
+  </style>
+</head>
+<body>
+
+<h1>Infrastructure & Compliance Report</h1>
+<p><strong>Generated:</strong> Thu Jan 22 23:46:35 IST 2026</p>
+
+<h2>Infrastructure Validation</h2>
+<table>
+<tr><th>Check</th><th>Status</th></tr>
+<tr><td>VPC exists</td><td class="pass">PASS</td></tr>
+<tr><td>EC2 instance is running</td><td class="pass">PASS</td></tr>
+<tr><td>Correct security group attached</td><td class="pass">PASS</td></tr>
+<tr><td>IAM role attached to EC2</td><td class="pass">PASS</td></tr>
+</table>
+
+<h2>Compliance Checks</h2>
+<table>
+<tr><th>Check</th><th>Status</th></tr>
+<tr><td>Root SSH login disabled</td><td class="pass">PASS</td></tr>
+<tr><td>Password authentication disabled</td><td class="pass">PASS</td></tr>
+<tr><td>UFW firewall enabled</td><td class="pass">PASS</td></tr>
+<tr><td>fail2ban installed</td><td class="pass">PASS</td></tr>
+</table>
+</body>
+</html>

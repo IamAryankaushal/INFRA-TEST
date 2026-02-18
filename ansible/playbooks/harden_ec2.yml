@@ -1,0 +1,48 @@
+---
+- name: OS Hardening on EC2
+  hosts: ec2
+  become: true
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install basic security packages
+      apt:
+        name:
+          - ufw
+          - fail2ban
+        state: latest
+
+    - name: Disable root SSH login
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^PermitRootLogin'
+        line: 'PermitRootLogin no'
+      notify: restart ssh
+
+    - name: Disable password authentication
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^PasswordAuthentication'
+        line: 'PasswordAuthentication no'
+      notify: restart ssh
+
+    - name: Ensure UFW allows SSH
+      ufw:
+        rule: allow
+        port: '22'
+        proto: tcp
+
+    - name: Enable UFW firewall
+      ufw:
+        state: enabled
+        policy: deny
+
+  handlers:
+    - name: restart ssh
+      service:
+        name: ssh
+        state: restarted
+
