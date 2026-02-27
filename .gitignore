@@ -5,7 +5,7 @@
 crash.log
 
 # Terraform lock file (optional to keep)
-# .terraform.lock.hcl
+.terraform.lock.hcl
 
 # Sensitive files
 *.pem
