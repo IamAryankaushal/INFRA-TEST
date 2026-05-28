@@ -1,4 +1,3 @@
-````md
 <div align="center">
 
 # INFRA-TEST
@@ -365,11 +364,4 @@ Cloud / DevOps / Infrastructure Engineering
 * LinkedIn: https://www.linkedin.com/in/ar-yan-kau-shal/
 
 ---
-
-# License
-
-This project is licensed under the MIT License.
-
-```
-```
 
