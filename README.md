@@ -223,32 +223,6 @@ terraform destroy
 
 ---
 
-# Screenshots
-
-## Terraform Deployment
-
-<img width="100%" src="docs/terraform.png"/>
-
----
-
-## AWS Infrastructure
-
-<img width="100%" src="docs/aws.png"/>
-
----
-
-## Validation Output
-
-<img width="100%" src="docs/validation.png"/>
-
----
-
-## HTML Compliance Report
-
-<img width="100%" src="docs/report.png"/>
-
----
-
 # Getting Started
 
 ## Prerequisites
